@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(238, 255, 0);
+    justify-content: space-around;
+    color:brown;
+    /* padding: 20px 0; */
+    height: 50px;
+    align-items: center;
+}
+
+nav .logo{
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: brown;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+nav ul li a:hover{
+    font-weight: bolder;
+    color: azure;
+    background-color: rgb(190, 109, 16);
+    padding: 5%;
+}
+
+/* Hamburger menu*/
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: brown;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger menu animation*/
+
+/* cara bacanya :nth-child() adalah... anak ke2 dari .menu-toggle */
+.menu-toggle span:nth-child(2){
+    /* background-color: red; */
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+/* cara bacanya : ketika input di cek ~cari~ sodaranya yg merupakan span anak ke-2 */
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: brown;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: brown;
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsif tablet*/
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* responsif mobile*/
+@media screen and (max-width: 576px){
+    nav ul {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 0;
+        height: 100vh;
+        width:  80%;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(238, 255, 0);
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu-toggle{
+        display: flex;
+    }
+}

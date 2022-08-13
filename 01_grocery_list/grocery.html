@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Grocery-List </title>
+        <link rel="stylesheet" href="style_groc.css">
+    </head>
+
+
+    <body>
+        <div class="wrap">
+            <!-- form -->
+            
+            <form class="formGrocery" id="formGrocery" >
+                <p id="keterangan"></p>
+                <h2>Grocery Bud</h2>
+                <input id="inputList" type="text" placeholder="Mau beli apa hari ini?">
+                <button id="submitList" type="submit">submit</button>
+            </form>
+
+            <!--daftar list-->
+            <div class="boxList" id="boxList"> <!--hidden-->
+                <div class="groceryList" id="groceryList">
+                    <!--tambahan dari JS
+                        <div id="listItem">
+                            <p> Pergi ke Toko Pak Budi</p>
+                            <div class="allBTN">
+                                <button id="editBTN">edit</button>
+                                <button id="hapusBTN">hapus</button>
+                            </div>
+                        </div>
+                    -->
+                </div>
+                <button class="clearListBTN" id="clearListBTN">clear list</button>
+            </div>
+        </div>
+
+
+    <script src="apk_groc.js"></script>    
+    </body>
+</html>

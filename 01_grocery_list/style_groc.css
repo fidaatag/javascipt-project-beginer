@@ -1,0 +1,58 @@
+.wrap {
+    background-color: aqua;
+    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;  
+    text-align: center; 
+}
+form {
+    margin-bottom: 2rem;
+}
+#keterangan {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 0.25rem;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+}
+
+input {
+    width: 24rem;
+    height: 1.5rem;
+}
+
+#editBTN, #hapusBTN {
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.boxList {
+    visibility: hidden;
+    display: inline-block;
+}
+.listItem {
+    display: flex;
+}
+.listItem p {
+    background-color: rgb(180, 209, 235);
+    border-radius: 15px;
+    width: 20rem;
+    height: 1.5rem;
+}
+.allBTN {
+    margin: 16px;
+}
+
+.keterangan-merah {
+    background-color: rgb(212, 129, 129);
+}
+.keterangan-hijau {
+    background-color: rgb(126, 206, 102);
+}
+
