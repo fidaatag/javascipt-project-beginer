@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rakus</title>
+        <link rel="stylesheet" href="hiasan.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="colom-1">
+                <div class="menuSamping">
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+            </div>
+
+            <div class="colom-2">
+                <div class="haiNama">
+                    <div class="profil"><img src="img/logoRakus.png"></div>
+                    <h2>RAKUS</h2>
+                    <p>singkatan dari - <i>Rak Buku System</i> <br><br>Aplikasi RAKUS membantu kamu menyimpan koleksi buku. Buku yang sedang dibaca ataupun yang sudah selesai dibaca dapat disimpan dengan rapi. Sistem Rakus menggunakan local storage yang tersedia di setiap browser. Jadikan Rakus tempat terbaik mengelola buku-bukumu. </p>
+                </div>
+                <div class="dibacaTambah">
+                    <div class="sedangDibaca"><h2>Sedang Dibaca</h2></div>
+                    <div class="tambahBuku" id="tambahBuku"><button>Tambah Buku</button></div>
+                </div>
+                <div class="kotakSedangDibaca">
+                    <div class="drafSedangDibaca" id="drafSedangDibaca"></div>
+                </div>
+                
+            </div>
+
+            <div class="colom-3">
+                <div class="cariFilter">
+                    <div class="cariBuku">
+                        <input id="mencariBuku" type="text" name="keyword" placeholder="Apa yang ingin kamu baca?">
+                    </div>
+                    <div class="submitCari" >
+                        <button id="btnSearch">Cari Buku</button>
+                    </div>
+                    <div class="filter">
+                        <a href="#"><i class="large material-icons">filter_list</i></a>
+                    </div>
+                </div>
+                <div class="jumlahBuku">
+                    <div class="jumlahDibaca">
+                        <div class="angkajumlahDibaca"><p id="angkajumlahDibaca"></p></div>
+                        <div class="tulisanjumlahDibaca"><p>Buku <b>Sedang</b> Dibaca</p> </div>
+                    </div>
+
+            
+                    <div class="jumlahTerbaca">
+                        <div class="angkajumlahTerbaca"><p id="angkajumlahTerbaca"></p></div>
+                        <div class="tulisanjumlahTerbaca"><p>Buku <b>Sudah</b> Terbaca</p></div>
+                    </div>
+            
+
+                </div>
+                <div class="sudahTerbaca">
+                    <h2>Sudah Terbaca</h2>
+                </div>
+                <div class="kotakSudahTerbaca">
+                    <div class="drafSudahTerbaca" id="drafSudahTerbaca"></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="popUpContainer" id="popUpContainer">
+            <div class="popUptambahBuku">
+                <h2 align="center">Tambah Koleksi Buku</h2>
+                <form class="formTambah" id="formTambah">
+                    <div class="inputTambah">
+                        <label for="judul">Judul: </label><br>
+                        <input id="judul" type="text" name="judul" placeholder="Tulis Judul Buku" maxlength="100" required>
+                    </div>
+                    <div class="inputTambah">
+                        <label for="penulis">Penulis: </label><br>
+                        <input id="penulis" type="text" name="penulis" placeholder="Siapa Penulis Buku" maxlength="100" required>
+                    </div>
+                    <div class="inputTambah">
+                        <label for="tahun">Tahun: </label><br>
+                        <input id="tahun" type="text" name="tahun" placeholder="Tahun Diterbitkan" maxlength="100">
+                    </div>
+                
+                    <button type="reset" class="btn-keluar">Keluar</button>
+                    <input type="submit" value="Submit" name="Submit" class="btn-submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="popUp_EditBuku" id="popUp_EditBuku">
+            <div class="popUp_EditBuku_box">
+                <h2 align="center">Edit Buku Terpilih</h2>
+                <form class="formEdit" id="formEdit">
+                    <div class="inputEdit">
+                        <label for="judul">Judul: </label><br>
+                        <input id="judulEdit" type="text" name="judul" maxlength="100">
+                    </div>
+                    <div class="inputTambah">
+                        <label for="penulis">Penulis: </label><br>
+                        <input id="penulisEdit" type="text" name="penulis" maxlength="100">
+                    </div>
+                    <div class="inputTambah">
+                        <label for="tahun">Tahun: </label><br>
+                        <input id="tahunEdit" type="text" name="tahun" maxlength="100">
+                    </div>
+                
+                    <button type="reset" class="btnKeluar_Edit">Keluar</button>
+                    <input type="submit" value="Submit" name="Update" class="btnSubmit_Edit">
+                </form>
+            </div>
+        </div>
+
+
+    <script src="js/01_buku.js"></script>
+    <script src="js/02_display.js"></script>
+    <script src="js/03_dom.js"></script>
+    <script src="js/04_search.js"></script>
+    </body>
+</html>

@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+}
+
+/* membagi layout jadi 3 bagian*/
+.container {
+    display: flex;
+}
+
+.colom-1 {
+    width: 5%;
+}
+
+.colom-2 {
+
+    width: 60%;
+    margin: 5px;
+}
+
+.colom-3 {
+    width: 35%;
+    margin: 5px;
+}
+
+/* colom 1 : navbar */
+.menuSamping {
+    background-color: rgb(0, 0, 0);
+    height: 200%;
+    width: 50px; 
+    padding-top: 100%;
+}
+
+.menuSamping a {
+    color: aliceblue;
+    display: block;
+    line-height: 60px;
+    padding-left: 15px;
+    margin-top: 1000%;
+}
+.menuSamping a:hover{
+    background: antiquewhite;
+    color: rgb(0, 0, 0);
+}
+
+/* colom 2 : haiNama, dibaca, add, draf */
+
+/* haiNama*/
+.haiNama {
+    background-color: antiquewhite;
+    height: 30%;
+    border-radius: 15px;  
+    padding: 25px; 
+}
+.haiNama img {
+    position: absolute;
+    width: 230px;
+    left: 45%;
+    margin-top: -30px;
+}
+.haiNama h2 {
+    font-size: 50px;
+    margin: 2px;
+}
+.haiNama p {
+    width: 70%;
+    margin-left: 2px;
+}
+
+/* dibaca+Tambah */
+.dibacaTambah {
+    
+    display: flex;
+    margin-top: 5px;
+}
+.sedangDibaca {
+    padding-left: 25px;
+    width: 50%;
+}
+.tambahBuku {
+    padding: 10px;
+    width: 50%;
+}
+.tambahBuku button {
+    margin-left: 40%;
+    width: 60%;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    color: antiquewhite;
+}
+
+/* draf di baca */
+.kotakSedangDibaca {
+    position: absolute;
+    width: 59%;
+
+}
+
+/*tambahan dari JS */
+.kotakSedangDibaca .boxTampilanBuku {
+    background-color: antiquewhite;
+    margin-bottom: 7px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 20%;
+    display: flex;
+}
+
+.kotakSedangDibaca .imageBUKU img {
+    width: 150px;
+    border-radius: 50%;
+    left: 50%;
+    margin: 20px;
+}
+.kotakSedangDibaca .detailBuku {
+    width: 70%;
+    margin-top: 30px;
+}
+.kotakSedangDibaca.detailBuku h3 {
+    margin-bottom: 0;
+}
+.kotakSedangDibaca .detailBuku p {
+    margin-bottom: 0;   
+}
+
+.kotakSedangDibaca .boxTampilanBuku button {
+    width: 100px;
+    height: 20px;
+    margin-top: 90px;
+    margin-right: 20px;
+}
+
+
+/* colom 3 : cari, jumlah, draf terbaca */
+
+/* cari */
+.cariFilter {
+    display: flex;
+}
+.cariBuku {
+    width: 75%;
+}
+.cariBuku input {
+    height: 25px;
+    width: 97%;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+/* tombol cari */
+.submitCari {
+    width: 20%;
+}
+.submitCari button {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    border-radius: 12px;
+    background: rgb(0, 0, 0);
+    color: antiquewhite;
+}
+
+/* filter */
+.filter {
+    width: 5%;
+    padding-top: 5px;
+}
+.filter a i {
+    font-size:20px;
+}
+
+/* papan score */
+.jumlahBuku {
+    display: flex;
+    height: 35%;
+    
+}
+.jumlahDibaca, 
+.jumlahTerbaca {
+    background-color: antiquewhite;
+    width: 50%;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    
+}
+.angkajumlahDibaca,
+.angkajumlahTerbaca {
+    width: 50%;
+    font-size: 80px;
+}
+.tulisanjumlahDibaca,
+.tulisanjumlahTerbaca {
+    width: auto;
+}
+
+.angkajumlahDibaca p,
+.angkajumlahTerbaca p {
+    line-height: 10%;
+    padding-left: 15px;
+}
+
+.tulisanjumlahDibaca p,
+.tulisanjumlahTerbaca p {
+    margin-top: 70%;
+}
+/* draf Terbaca */
+.kotakSudahTerbaca {
+    position:absolute;
+    width: 33%;
+    margin-left: 10px;
+}
+/*tambahan dari JS */
+.kotakSudahTerbaca .boxTampilanBuku {
+    background-color: antiquewhite;
+    margin-bottom: 7px;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 20%;
+    display: flex;
+}
+
+.kotakSudahTerbaca .imageBUKU img {
+    width: 80px;
+    border-radius: 50%;
+    left: 50%;
+    margin: 10px;
+}
+.kotakSudahTerbaca .detailBuku {
+    width: 80%;
+}
+.kotakSudahTerbaca .detailBuku h3 {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.kotakSudahTerbaca .detailBuku p {
+    font-size: 12px;
+    margin-bottom: 0;   
+}
+
+.kotakSudahTerbaca .boxTampilanBuku button {
+    width: 100px;
+    height: 20px;
+    margin-top: 60px;
+    margin-right: 10px;
+}
+
+
+/* pop up tambah buku */
+.popUpContainer,
+.popUp_EditBuku {
+    width: 100%;
+    height: 100%; 
+    visibility: hidden;   
+}
+.popUpContainer.active,
+.popUp_EditBuku.active{
+    visibility: visible;
+}
+.popUptambahBuku,
+.popUp_EditBuku_box {
+    position: fixed;
+    background-color: rgb(250,235,215,0.95);
+    border-radius: 10px;
+    width: 100%;
+    height: 110%;
+    margin-top: -50%;
+}
+
+.popUptambahBuku h2,
+.popUp_EditBuku_box h2{
+    margin-top: 15%;
+}
+
+.formTambah,
+.formEdit {
+    padding-left: 35%;
+    width: 30%;
+    height: 280px;
+}
+.inputTambah,
+.inputEdit {
+    margin-top:10px;
+}
+.inputTambah input,
+.inputEdit input{
+    width: 100%;
+}
+
+.btn-keluar,
+.btnKeluar_Edit{
+    margin-top:25px;
+    margin-left:30%;
+}
+.btn-keluar, .btn-submit,
+.btnKeluar_Edit, .btnSubmit_Edit {
+    background: rgb(0, 0, 0);
+    color: antiquewhite;
+    border-radius: 5px;
+    width: 20%;
+}
+
+
+
+
+
+
+
