@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="hiasan.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fbd4858647.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -96,6 +97,10 @@
             <div class="popUp_EditBuku_box">
                 <h2 align="center">Edit Buku Terpilih</h2>
                 <form class="formEdit" id="formEdit">
+                    <div class="edit-id">
+                        <label for="edit-id" class="form-label">id</label>
+                        <input class="form-input" type="text" id="edit-id" name="idbuku" placeholder="id buku">
+                    </div>
                     <div class="inputEdit">
                         <label for="judul">Judul: </label><br>
                         <input id="judulEdit" type="text" name="judul" maxlength="100">
@@ -120,5 +125,8 @@
     <script src="js/02_display.js"></script>
     <script src="js/03_dom.js"></script>
     <script src="js/04_search.js"></script>
+    <script src="js/05_about.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     </body>
 </html>
