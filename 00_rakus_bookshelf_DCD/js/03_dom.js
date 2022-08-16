@@ -1,14 +1,12 @@
 const keySTORAGE = 'BUKU_TERSIMPAN';
 
-
-
-
+// ******* Update Data Buku Terbaru Setiap Terjadi Perubahan *******
 const updateDataBuku = () => {
     if(checkStorage())
         saveData();
 }
 
-// mengecek storage browser
+// ******* mengecek storage browser *******
 const checkStorage = () => {
     if(typeof(Storage) == undefined){
         alert('Browser kamu tidak support web storage');
@@ -17,14 +15,14 @@ const checkStorage = () => {
     return true;
 }
 
-//memasukan data array ke local storage ==> setItem
+// ******* memasukan data array ke local storage ==> setItem *******
 const saveData = () => {
     const parseData = JSON.stringify(bukuS);
     localStorage.setItem(keySTORAGE, parseData);  //setItem(key, value)
     document.dispatchEvent(new Event('ondatasaved'));
 }
 
-// mengubah ke JSON
+// ******* mengubah ke JSON *******
 const loadDatafromStorage = () => {
     const serialData = localStorage.getItem(keySTORAGE);
     const data = JSON.parse(serialData);
