@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.clock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.time {
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+}
+.date-time {
+    font-size: 20px;
+    color: #fff;
+}
+
+@media screen and (max-width: 786px) {
+    .time {
+        font-size: 50px;
+    }
+    
+}

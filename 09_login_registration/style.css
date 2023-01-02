@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap'); 
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, 
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* make a background blue like half sircle */
+.container:before {
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+
+    /* move over panel right to left when clik */
+    z-index: 6; 
+
+    /* animation moving */
+    transition: 1.8s ease-in-out;
+}
+
+/***** SignIn & SignUp *****/
+
+.forms-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.signIN-signUP {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+    /* now we need to stack up our forms 
+    and to do that, we need to define the forms'container (".sigIn-signUp")
+    as a grid container with one colomn */
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    /* move over panel right to left when clik */
+    z-index: 5; 
+
+    /* animation moving */
+    transition: 1s .7s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5rem;
+    overflow: hidden;
+
+    /* and finally, we want each form to go form line 1 to line 2 
+    horizontally and vertically.
+
+    As you can see, the grid container has 2 column lines and 2 row lines.
+
+    and each from is starting from column line 1 to column line 2, 
+    and from row line 1 to row line 2*/
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    /* animation moving */
+    /* we need to add a delay to the forms so it bring over the other form 
+    when they'r covered by the blue gradient */
+    transition: 0.2s 0.7s ease-in-out;
+}
+
+    /* this way our forms are stacking up 
+    we need to hide the signUp-form and show signIn-form */
+form.signIn-form {
+    z-index: 2;
+}
+form.signUp-form {
+    z-index: 1;
+    opacity: 0;
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/***** SignIn & SignUp ===== <!-- SignIn Manual--> *****/
+.input-field {
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+    
+}
+
+.input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1.1rem;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.input-field input::placeholder {
+    color:  #aaa;
+    font-weight: 500;
+}
+
+.btn {
+    width:  150px;
+    height:  49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #5995fd;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: #4d84e2;
+}
+
+
+/***** SignIn & SignUp ===== <!-- SignIn Automatic--> *****/
+.social-text {
+    padding: .7rem 0;
+    font-size: 1rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    height: 46px;
+    width: 46px;
+    border: 1px solid #333;
+    margin: 0 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #4d84e2;
+    border-color: #4d84e2;
+}
+
+
+
+/***** Registration *****/
+
+.panels-container {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+
+    /* move over panel right to left when clik */
+    z-index: 7; 
+}
+
+.left-panel {
+    /* and we need to set pointer event to none for the panel that's over 
+    the forms which in our case is the right panel */
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+    color: #fff;
+
+    /* animation moving */
+    transition: .9s .6s ease-in-out;
+}
+
+.panel h3 {
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.image {
+    width: 100%;
+    /* animation moving
+    we need to change value from transition: .9s .6s ease-in-out 
+    to delay the content and the image, so we'll have a nice animation */
+    transition: 1.1s .4s ease-in-out;
+}
+
+.right-panel .content,
+.right-panel .image {
+    transform: translateX(800px);
+}
+
+/* event though i moved the right panel to the right, i still can't click on the form or do something with it.
+so we need to bring the two pnael over rhe forms'container using z-index */
+
+
+
+
+/***** Animation *****/
+.container.signUp-mode:before{
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.container.signUp-mode .left-panel .image,
+.container.signUp-mode .left-panel .content {
+    transform: translate(-800px);
+}
+
+.container.signUp-mode .right-panel .content,
+.container.signUp-mode .right-panel .image {
+    transform: translateX(0px);
+}
+
+/* as you can see, we can't click on the right panel, that's cz it still have "pointer-events:none" 
+we can switch with signUp-mode before that */
+.container.signUp-mode .left-panel {
+    pointer-events: none;
+}
+
+.container.signUp-mode .right-panel {
+    pointer-events: all;
+}
+
+.container.signUp-mode .signIN-signUP {
+    left: 25%;
+}
+
+.container.signUp-mode form.signIn-form {
+    z-index: 1;
+    opacity: 0;
+}
+.container.signUp-mode form.signUp-form {
+    z-index: 2;
+    opacity: 1;
+}
+
+
+
+/***** Responsiv Media Query *****/
+
+@media (max-width: 870px){
+    .container {
+        min-height: 800px;
+        height: 100vh;
+    }
+
+    .container:before{
+       width: 1500px;
+       height: 1500px;
+       left: 30%;
+       bottom: 68%;
+       transform: translateX(-50%);
+
+       /* here we set right and top properties to initial, 
+       so we set them to their default value. This way, 
+       we remove previous values og these properties */
+       right: initial;
+       top: initial;
+       transition:  2s ease-in-out;
+    }
+
+    .signIN-signUP {
+        width: 100%;
+        left: 50%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+        transition: 1s 0.8s ease-in-out;
+    }
+
+    .panels-container {
+        z-index: 10;
+        grid-template-columns: 1fr;
+
+        /* we need 3 row, so we can put the left panel on the first row,
+        and the right panel on the last row, and leave the middle row entry.
+        this way, we'll hace the left panel on top og the container
+        and rhe right panel on the buttom*/
+        grid-template-rows: 1fr 2fr 1fr;
+
+    }
+    
+    .panel {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+    }
+    .panel .content {
+        padding-right: 15%;
+        transition: 0.9s 0.8s ease-in-out;
+    }
+    .panel h3 {
+        font-size: 1.2rem;
+    }
+    .panel p {
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+    }
+    .btn.transparent {
+        width: 110px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .image {
+        width: 200px;
+        transition: 0.9s 0.6s ease-in-out;
+    }
+
+    .left-panel {
+        grid-row: 1 / 2;
+    }
+
+    .right-panel {
+        grid-row: 3 / 4;
+    }
+
+    .right-panel .content,
+    .right-panel .image {
+        transform: translateY(300px);
+    }
+
+    .container.signUp-mode:before {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+    .container.signUp-mode .left-panel .image,
+    .container.signUp-mode .left-panel .content {
+        transform: translateY(-300px);
+    }
+
+    .container.signUp-mode .signIN-signUP {
+        top: 5%;
+        transform: translate(-50%, 0);
+        left:  50%;
+    }
+}
+
+@media (max-width: 570px){
+    form {
+        padding: 0 1.5rem;
+    }
+    .image {
+        display: none;
+    }
+    .panel .content {
+        padding: 0.5rem 1rem;
+    }
+    .container:before {
+        bottom: 72%;
+        left: 50%;
+    }
+    .container.signUp-mode:before {
+        bottom: 28%;
+        left: 50%;
+    }
+}

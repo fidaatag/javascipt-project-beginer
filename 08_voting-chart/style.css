@@ -1,0 +1,111 @@
+/***** global  */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/***** navbar  */
+nav {
+    /* background-color: tan; */
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav img {
+    width: 13vh;
+    height: 9vh;
+}
+nav .judul {
+    line-height: 1vh;
+}
+
+/***** container vote  */
+.container-vote {
+    /* background-color: tomato; */
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/***** calon */
+.container-calon {
+    background-color: snow;
+    border: 2px solid black;    
+}
+.container-calon:hover {
+    box-shadow: rgba(0, 0, 0, .9) 2px 8px 8px -5px;
+    transform: translateY(-10px);  
+}
+.calon {
+    /* background-color: teal; */
+    width: 40vh;
+}
+.foto-calon {
+    width: 100%;
+}
+.info-calon {
+    /* background-color: salmon; */
+    display: flex;
+    text-align: center;
+    line-height: 1vh;
+    align-items: center;
+}
+.count {
+    /* background-color: plum; */
+    width: 30%;
+}
+.hasil-voting {
+    font-size: 5vh;
+    margin-bottom: 0;
+}
+.biodata {
+    /* background-color: orange; */
+    width: 70%;
+    border-left: 1px solid ;
+}
+
+/***** button vote */
+.btn-vote {
+    width: 100%;
+    height: 7vh;
+    font-size: 3vh;
+    border-style:none;
+    border-top: 2px solid;
+    cursor: pointer;
+}
+.btn-vote:hover {
+    font-weight: bold;
+}
+#btn-voteA {
+    background-color:royalblue
+}
+#btn-voteB {
+    background-color:limegreen
+}
+
+
+
+/***** chart bar  */
+.chartCard {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    background: rgba(255, 26, 104, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chartBox {
+    width: 700px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(255, 26, 104, 1);
+    background: white;
+  }
+
+
+
+
+
